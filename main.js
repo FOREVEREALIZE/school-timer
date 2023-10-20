@@ -98,8 +98,8 @@ const updateTimer = (start_date, end_date) => {
 const changeDates = (target) => {
     currentTarget = target
     title.text(TITLES[currentTarget])
-    const startDate = new Date().setTime(START_DATES[currentTarget]).toString()
-    const endDate = new Date().setTime(END_DATES[currentTarget]).toString()
+    const startDate = new Date(START_DATES[currentTarget])
+    const endDate = new Date(END_DATES[currentTarget])
 
     const days = [
         "Sunday",
