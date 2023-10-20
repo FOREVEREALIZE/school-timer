@@ -37,6 +37,9 @@ const minuteLabel = $('#minute-label')
 const secondLabel = $('#second-label')
 const percentLabel = $('#percent-label')
 
+const startDateLabel = $('#start-date')
+const endDateLabel = $('#end-date')
+
 const calculateTimeLeft = (target) => {
     const days = Math.floor((target - Date.now()) / 1000 / 60 / 60 / 24)
     const hours = Math.floor(((target - Date.now()) / 1000 / 60 / 60) - (days * 24))
@@ -95,6 +98,8 @@ const updateTimer = (start_date, end_date) => {
 const changeDates = (target) => {
     currentTarget = target
     title.text(TITLES[currentTarget])
+    startDateLabel.text(new Date(START_DATES[currentTarget]).toString())
+    endDateLabel.text(new Date(END_DATES[currentTarget]).toString())
 }
 
 const changeColorMode = () => {
