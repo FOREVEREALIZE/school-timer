@@ -128,20 +128,20 @@ const changeDates = (target) => {
 
     startDateLabel.text(
         days[startDate.getDay()] +
-        " " +
+        ", " +
         startDate.getDate() +
         " " +
         months[startDate.getMonth()] +
-        " " +
+        ", " +
         startDate.getFullYear()
     )
     endDateLabel.text(
         days[endDate.getDay()] +
-        " " +
+        ", " +
         endDate.getDate() +
         " " +
         months[endDate.getMonth()] +
-        " " +
+        ", " +
         endDate.getFullYear()
     )
 }
