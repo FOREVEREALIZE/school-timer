@@ -98,8 +98,52 @@ const updateTimer = (start_date, end_date) => {
 const changeDates = (target) => {
     currentTarget = target
     title.text(TITLES[currentTarget])
-    startDateLabel.text(new Date(START_DATES[currentTarget]).toString())
-    endDateLabel.text(new Date(END_DATES[currentTarget]).toString())
+    const startDate = new Date(START_DATES[currentTarget]).toString()
+    const endDate = new Date(END_DATES[currentTarget]).toString()
+
+    const days = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+    ]
+
+    const months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+    ]
+
+    startDateLabel.text(
+        days[startDate.getDay()] +
+        " " +
+        startDate.getDate() +
+        " " +
+        months[startDate.getMonth()] +
+        " " +
+        startDate.getFullYear()
+    )
+    endDateLabel.text(
+        days[endDate.getDay()] +
+        " " +
+        endDate.getDate() +
+        " " +
+        months[endDate.getMonth()] +
+        " " +
+        endDate.getFullYear()
+    )
 }
 
 const changeColorMode = () => {
